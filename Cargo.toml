@@ -1,0 +1,40 @@
+[package]
+name = "monero-swap-lib"
+version = "0.1.0"
+authors = ["h4sh3d <h4sh3d@truelevel.io>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+hex = "0.3"
+bitcoin_hashes = "0.3"
+libsecp256k1 = "0.2"
+serde = "1.0"
+serde_derive = "1.0"
+
+[dependencies.curve25519-dalek]
+version = "1"
+features = ["nightly"]
+
+[dependencies.bitcoin]
+version = "0.17"
+default-features = false
+features = []
+
+[dependencies.rand]
+version = "0.6"
+features = ["wasm-bindgen"]
+
+[dev-dependencies]
+bitcoincore-rpc = "0.2"
+bitcoin-bech32 = "0.8"
+
+[patch.crates-io]
+bitcoin = { git = "https://github.com/h4sh3d/rust-bitcoin", branch = "feature/feat-secp" }
+#bitcoincore-rpc = { path = "../rust-bitcoincore-rpc/client" }
+#bitcoincore-rpc-json = { path = "../rust-bitcoincore-rpc/json" }
+bitcoincore-rpc = { git = "https://github.com/h4sh3d/rust-bitcoincore-rpc", branch = "internal-rust-btc" }
+bitcoincore-rpc-json = { git = "https://github.com/h4sh3d/rust-bitcoincore-rpc", branch = "internal-rust-btc" }
