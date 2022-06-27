@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/h4sh3d/monero-swap-lib.svg?branch=master)](https://travis-ci.org/h4sh3d/monero-swap-lib) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+> **THIS PROJECT HAS BEEN ARCHIVED**
+
 # XMR-BTC Atomic Swap Rust library
 
 > This code has not been reviewed or audited and is not complete.
